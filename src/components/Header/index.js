@@ -1,22 +1,22 @@
 import './index.css';
-const Header = () => {
+
+const Header = ({ components }) => {
     return (
-        <div className='flex nav-bar'>
-            <div className='w-9/12 logo'>
-                Hoteles Xcaret
+        <>
+            <div className='header'>
+                {/* {renderedLanguages} */}
+                <div className='flex'>
+                    <div className='w-full text-header'>{components?.header?.h1}</div>
+                </div>
 
+                <div className='flex'>
+                    <div className='w-5/12 second-text-header'>{components?.header?.discount}</div>
+                    <div className='w-7/12 description-header'>{components?.header?.paragraphs.map((c, index) =>
+                        <p key={index}>{c}</p>
+                    )}.</div>
+                </div>
             </div>
-            <div className='w-1/12 menu-text'>
-                Contacto
-            </div>
-            <div className='w-1/12 menu-text'>
-                EN
-            </div>
-            <div className='w-1/12 menu-text'>
-                MXN
-            </div>
-        </div>
-
+        </>
     );
 };
 

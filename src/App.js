@@ -5,11 +5,23 @@ import {
   RouterProvider,
 
 } from "react-router-dom";
+import { useFetchLanguageInitialQuery } from './redux/api/languages';
+import {isMobile} from 'react-device-detect';
+
+
 function App() {
-  return (
-    <div className="App">
-      <RouterProvider router={RoutesComponent} />
+  const renderContent = () => {
+    if (isMobile) {
+      return <div className="App">
+      <RouterProvider router={RoutesComponent}/>
     </div>
+    }
+    return <div className="App">
+      <RouterProvider router={RoutesComponent}/>
+    </div>
+  }
+  return (
+    renderContent()
   );
 }
 

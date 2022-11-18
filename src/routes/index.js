@@ -6,7 +6,11 @@ import Home from "../views/Home";
 
 const RoutesComponent = createBrowserRouter([
     {
-      path: "/",
+      path: "/es",
+      element: <Home/>,
+    },
+    {
+      path: "/en",
       element: <Home/>,
     },
   ]);

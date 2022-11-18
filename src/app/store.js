@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { languagesApi } from "../redux/api/languages";
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    [languagesApi.reducerPath]: languagesApi.reducer,
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(languagesApi.middleware),
 });
+
+export default store;

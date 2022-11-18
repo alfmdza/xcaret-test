@@ -14,39 +14,3 @@
     text-decoration: rgb(74, 74, 74);
     line-height: 20px;
 }
-
-.section-2 {
-
-    height: 135px;
-    background-color: #363636;
-}
-
-.section-2-text {
-    margin-top: 24px;
-    font-family: Avenir;
-    font-size: 10px;
-    color: #bdbdbd;
-    text-decoration: rgb(189, 189, 189);
-    line-height: 16px;
-}
-
-.section-2-text-1 {
-    font-size: 24px;
-    color: #bdbdbd;
-}
-
-.section-3 {
-
-    height: 40px;
-    background-color: #000000;
-
-}
-
-.section-3-text {
-    margin-top: 9px;
-    font-family: Avenir;
-    font-size: 12px;
-    color: #d6d6d6;
-    text-decoration: rgb(214, 214, 214);
-    line-height: 20px;
-}
