@@ -5,7 +5,6 @@ import {
   RouterProvider,
 
 } from "react-router-dom";
-import { useFetchLanguageInitialQuery } from './redux/api/languages';
 import {isMobile} from 'react-device-detect';
 
 

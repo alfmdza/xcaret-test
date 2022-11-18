@@ -13,7 +13,7 @@ const Home = () => {
     const { pathname } = useLocation()
 
     console.log(pathname)
-    const { data: language, isLoading, isSuccess, isFetching, error } = useFetchLanguageInitialQuery();
+    const { data: language, isLoading, isFetching } = useFetchLanguageInitialQuery();
     console.log(language)
 
     const renderSwitch = (pathname) => {
@@ -31,7 +31,6 @@ const Home = () => {
                     <Footer components={language.es} />
                     <Prefooter components={language.es} /></div>)
 
-                break;
             case '/en':
                 console.log("ingles")
                 return (<div>
@@ -43,7 +42,6 @@ const Home = () => {
 
                     <Footer components={language.en} />
                     <Prefooter components={language.en} /></div>)
-                break;
 
             default:
                 break;

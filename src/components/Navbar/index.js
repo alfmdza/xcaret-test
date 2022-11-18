@@ -15,7 +15,7 @@ const Navbar = ({ components }) => {
         }
     ];
 
-    const [selected, setSelected] = useState()
+    const [selected] = useState()
 
     const handleChange = (event) => {
         console.log(event.target.value);
@@ -61,8 +61,6 @@ const Navbar = ({ components }) => {
       ease-in-out
       m-0
       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
-                        {/* <option value="1">ES</option>
-                        <option value="2">EN</option> */}
                         {options.map((option) => (
                             <option value={option.value} key={option.value}>{option.label}</option>
                         ))}
