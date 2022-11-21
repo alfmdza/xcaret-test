@@ -5,14 +5,20 @@ import {
 import Home from "../views/Home";
 
 const RoutesComponent = createBrowserRouter([
-    {
-      path: "/es",
-      element: <Home/>,
-    },
-    {
-      path: "/en",
-      element: <Home/>,
-    },
+  {
+    path: "/",
+    children: [
+      {
+        path: "/es",
+        element: <Home/>,
+      },
+      {
+        path: "/en",
+        element: <Home/>,
+      },
+    ],
+  },
+    
   ]);
 
 export default RoutesComponent;
